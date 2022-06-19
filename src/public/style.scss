@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #0d1015
+}
+
+main {
+   display: flex;
+   justify-content: center;
+   
+   margin-top: 50px;
+
+   #champions {
+      display: flex;
+      flex-wrap: wrap;
+      // max-width: 1335px;
+      gap: 10px;
+      justify-content: center;
+
+      .champion {
+         display: flex;
+         justify-content: center;
+         align-items: flex-end;
+
+         background: url("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leblanc_0.jpg") no-repeat;
+         background-size: cover !important;
+         width: 400px;
+         height: 220px;
+         padding: 20px;
+         position: relative;
+         color: #fff;
+         transition: transform 0.1s ease;
+         transform-style: preserve-3d;
+         will-change: transform;
+         border-radius: 12px;
+
+         &::before {
+            content: "";
+            background: linear-gradient(186deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border-radius: 12px;
+         }
+         &:hover {
+            // box-shadow: 11px 10px 35px -24px rgba(255,255,255,1);
+            box-shadow: 0px 0px 75px -48px rgba(86, 132, 201, 1);
+
+
+            .info {
+               transform: translateZ(12px);
+            }
+         }
+
+         .info {
+            text-align: center;
+         }
+      }
+   }
+}
