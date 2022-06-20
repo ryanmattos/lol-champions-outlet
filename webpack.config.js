@@ -9,7 +9,7 @@ module.exports = {
       // styles: path.resolve(__dirname, "src",  "public", "style.scss") 
    },
    output: {
-      path: path.join(__dirname, "dist"),
+      path: path.join(__dirname, "docs"),
       filename: "[name].js",
       clean: true,
    },
